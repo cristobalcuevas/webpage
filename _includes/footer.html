@@ -1,42 +1,26 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
   <div class="wrapper">
-
-    <!-- Primera fila: Logo, Descripción y Redes Sociales -->
     <div class="footer-row">
       <div class="footer-col footer-col-1">
-        <!-- Logo -->
-        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="site-logo">
+        <img src="{{ site.baseurl}}/assets/img/logo.svg" alt="{{ site.title }} logo" style="max-width:100%">
       </div>
       <div class="footer-col footer-col-2">
-        <!-- Descripción -->
-        <p>{{ site.description | newline_to_br }}</p>
+        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
       </div>
       <div class="footer-col footer-col-3">
-        <!-- Redes sociales (activar el include si tienes un archivo de redes sociales) -->
-        {%- include social.html -%}
+				<p>Redes sociales</p>
       </div>
     </div>
-
-    <!-- Segunda fila: Autor y Copyright -->
     <div class="footer-row">
       <div class="footer-col footer-col-full">
-        <ul class="contact-list">
-          <!-- Autor -->
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- endif -%}
-          </li>
-          <!-- Correo de contacto -->
-          {%- if site.email -%}
-          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+				&copy; {{ "now" | date: "%Y" }}
+				{%- if site.author -%}
+					{%- if site.email -%}
+						<a class="u-email" href="mailto:{{ site.email }}">{{ site.author | escape }}</a>
           {%- endif -%}
-          <!-- Copyright -->
-          <li>&copy; {{ "now" | date: "%Y" }} {{ site.author }}</li>
-        </ul>
+        {%- endif -%}
       </div>
     </div>
-    
   </div>
 </footer>
