@@ -1,0 +1,42 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <div class="wrapper">
+
+    <!-- Primera fila: Logo, Descripción y Redes Sociales -->
+    <div class="footer-row">
+      <div class="footer-col footer-col-1">
+        <!-- Logo -->
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="site-logo">
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Descripción -->
+        <p>{{ site.description | newline_to_br }}</p>
+      </div>
+      <div class="footer-col footer-col-3">
+        <!-- Redes sociales (activar el include si tienes un archivo de redes sociales) -->
+        {%- include social.html -%}
+      </div>
+    </div>
+
+    <!-- Segunda fila: Autor y Copyright -->
+    <div class="footer-row">
+      <div class="footer-col footer-col-full">
+        <ul class="contact-list">
+          <!-- Autor -->
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- endif -%}
+          </li>
+          <!-- Correo de contacto -->
+          {%- if site.email -%}
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+          <!-- Copyright -->
+          <li>&copy; {{ "now" | date: "%Y" }} {{ site.author }}</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</footer>
