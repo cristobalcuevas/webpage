@@ -1,6 +1,9 @@
 title: Webpage
 author: Cristobal
 email: cristobalcuevaslagos@gmail.com
+description: >-
+  Neque porro quisquam est qui dolorem ipsum
+  quia dolor sit amet, consectetur, adipisci velit..."
 markdown: kramdown
 theme: minima
 plugins:
